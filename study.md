@@ -41,7 +41,11 @@ In your own words, define what the responsibilities of the model layer are in
 Rails.
 
 ```md
-<!-- your answer here -->
+The model is the part of the MVC pattern that interacts or is responsible for
+the data aspect of your application.  It is separate from both the control and
+view logic, making it independent of the view and controller.  Changing the
+data model should not impact the view or controller.  The data model interacts
+with the DB. Ideally the business logic is part of the model.
 ```
 
 ## Define Controller Responsibilities
@@ -50,7 +54,9 @@ In your own words, define what the responsibilities of the controller layer are
 in Rails.
 
 ```md
-<!-- your answer here -->
+The controller is responsible for the handling input to the application. It will
+then pass this input/data to the model.  Data that is passed back from the
+model is then passed onto the view.
 ```
 
 ## Define Router Responsibilities
@@ -58,7 +64,10 @@ in Rails.
 In your own words, define what the router does in Rails.
 
 ```md
-<!-- your answer here -->
+Routes handle the browser URLs that come from the View and passed are passed to
+the controller. Routes avoid the need to hard code strings in the browser with
+the use of routes.rb, providing a translation that is then handed off to the
+controller.
 ```
 
 ## The Request-Response Cycle in Rails
@@ -67,5 +76,7 @@ Starting with a client making a GET request to a particular URL, describe how
 the parts of Rails interact to produce and send a response.
 
 ```md
-<!-- your answer here -->
+When an incoming request comes in from the browser, the router is queried to
+match it to a controller action. This request can now be handed off to the controller
+which then send the request to the model(DB.)
 ```
